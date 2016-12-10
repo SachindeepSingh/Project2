@@ -1,0 +1,40 @@
+﻿@model Project2.Models.Non_veg_curry
+@{
+    ViewBag.Title = "Non_Vegfood Details";
+}
+<h2>Non_Vegfood Details</h2>
+<div>
+    <h4>Non_Vegfood</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Non_vegCurryName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Non_vegCurryName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Non_vegCurryDescription)
+        </dt>
+        
+        <dd>
+            @Html.DisplayNameFor(model => model.Non_vegCurryPrice)
+        </dd>
+        <dt>
+            @Html.DisplayFor(model => model.Non_vegCurryPrice)
+        </dt>
+        <dd>
+            <img src="@Url.Content(Model.Non_vegCurryImage)" class="img-rounded" />
+        </dd>
+    </dl>
+</div>
+<p>
+    @if (HttpContext.Current.User.IsInRole("Admin"))
+    {
+        @Html.ActionLink("Back to List", "Admin")
+    }
+    else
+    {
+        @Html.ActionLink("Back to List", "Index")
+    }
+</p>

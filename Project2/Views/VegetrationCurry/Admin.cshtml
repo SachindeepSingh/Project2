@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Project2.Models.Vegetration_curry>
+@{
+    ViewBag.Title = "Admin Vegetration_curry";
+}
+<h2>Admin Vegetration_curry</h2>
+<p>
+    @Html.ActionLink("Create New Vegetration_curry", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VegetrationCurryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VegetrationCurryShortDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VegetrationCurryPrice)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VegetrationCurryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VegetrationCurryShortDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VegetrationCurryPrice)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.VegetrationCurryId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Vegetration_curryId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Vegetration_curryId })
+            </td>
+        </tr>
+    }
+</table>

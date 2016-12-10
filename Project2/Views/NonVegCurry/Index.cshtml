@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Project2.Models.Non_veg_curry>
+@{
+    ViewBag.Title = "NonVegCurry";
+}
+<h2>Non_vegCurrys</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Non_vegCurryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Non_vegCurryShortDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Non_vegCurryPrice)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Non_vegCurryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Non_vegCurryShortDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Non_vegCurryPrice)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.Non_vegCurryId }, new { @class = "btn btn-success" })
+            </td>
+        </tr>
+    }
+</table>

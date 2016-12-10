@@ -1,0 +1,67 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url('../Assest/Images/background.jpg');
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+.navbar {
+   position:absolute;
+   background:#7c3722;
+   border-color: transparent;
+   z-index:10;
+}
+.nav.navbar-nav li a,footer{
+    color:#FFFFCC;
+    font-size:larger;
+}
+.carousel {
+    position: absolute;
+    top: 0px;
+    padding-left: 74px;
+    padding-right: 73px;
+    width:100%;
+}
+.nav.navbar-nav li a:hover{
+    background-color:#7c3722;
+    color:#FFFFCC;
+}
+.body-content{
+    background-color:#FFFFCC;
+    opacity:0.5;
+    border:thin;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+.dropdown-menu{
+    background: #7c3722
+}
+img{
+    
+}
+@media only screen and (max-width: 768px) {
+    .carousel {
+    position: absolute;
+    top: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width:100%;
+}
+}
+.a{ opacity:1.0;}
