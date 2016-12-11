@@ -16,13 +16,16 @@
         <dt>
             @Html.DisplayNameFor(model => model.Non_vegCurryDescription)
         </dt>
-        
         <dd>
-            @Html.DisplayNameFor(model => model.Non_vegCurryPrice)
+            @Html.DisplayFor(model => model.Non_vegCurryDescription)
         </dd>
+
         <dt>
-            @Html.DisplayFor(model => model.Non_vegCurryPrice)
+            @Html.DisplayNameFor(model => model.Non_vegCurryPrice)
         </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Non_vegCurryPrice)
+        </dd>
         <dd>
             <img src="@Url.Content(Model.Non_vegCurryImage)" class="img-rounded" />
         </dd>

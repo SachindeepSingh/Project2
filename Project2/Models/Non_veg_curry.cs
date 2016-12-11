@@ -9,8 +9,9 @@ namespace Project2.Models
     [Table("Non-veg curry")]
     public partial class Non_veg_curry
     {
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int Id { get; set; }
+        public int Non_vegCurryId { get; set; }
 
         [Column("Non-vegCurryName")]
         [Required]

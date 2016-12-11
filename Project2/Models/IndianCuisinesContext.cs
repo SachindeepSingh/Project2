@@ -14,7 +14,7 @@ namespace Project2.Models
 
         public virtual DbSet<Appetizer> Appetizers { get; set; }
         public virtual DbSet<Non_veg_curry> Non_veg_curry { get; set; }
-        public virtual DbSet<Vegetration_curry> Vegetration_curries { get; set; }
+        public virtual DbSet<Vegetration_curry> Vegetration_curry { get; set; }
         public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

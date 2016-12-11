@@ -261,6 +261,9 @@
     <Content Include="Views\Appetizer\Details.cshtml" />
     <Content Include="Views\Appetizer\Edit.cshtml" />
     <Content Include="Views\Appetizer\Delete.cshtml" />
+    <Content Include="Views\NonVegCurry\Create.cshtml" />
+    <Content Include="Views\Appetizer\Create.cshtml" />
+    <Content Include="Views\VegetrationCurry\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

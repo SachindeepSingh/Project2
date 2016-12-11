@@ -12,7 +12,7 @@
             @Html.DisplayNameFor(model => model.VegetrationCurryName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.VegetrationCurryShortDescription)
+            @Html.DisplayNameFor(model => model.VegetrationCurryDescription)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.VegetrationCurryPrice)
@@ -26,15 +26,15 @@
                 @Html.DisplayFor(modelItem => item.VegetrationCurryName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.VegetrationCurryShortDescription)
+                @Html.DisplayFor(modelItem => item.VegetrationCurryDescription)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.VegetrationCurryPrice)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.VegetrationCurryId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Vegetration_curryId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Vegetration_curryId })
+                @Html.ActionLink("Details", "Details", new { id = item.VegetrationCurryId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.VegetrationCurryId })
             </td>
         </tr>
     }

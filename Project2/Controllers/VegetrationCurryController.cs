@@ -16,14 +16,14 @@ namespace Project2.Controllers
         // GET: Vegetration_curries
         public ActionResult Index()
         {
-            return View(db.Vegetration_curries.ToList());
+            return View(db.Vegetration_curry.ToList());
         }
 
         [Authorize(Roles = "Admin")]
         // GET: Vegetration_curries for Admin
         public ActionResult Admin()
         {
-            return View(db.Vegetration_curries.ToList());
+            return View(db.Vegetration_curry.ToList());
         }
 
         // GET: Vegetration_curries/Details/5
@@ -33,7 +33,7 @@ namespace Project2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vegetration_curry vegetrarioncurry = db.Vegetration_curries.Find(id);
+            Vegetration_curry vegetrarioncurry = db.Vegetration_curry.Find(id);
             if (vegetrarioncurry == null)
             {
                 return HttpNotFound();
@@ -54,11 +54,11 @@ namespace Project2.Controllers
         [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "VegetrartionCurryId,VegetrartionCurryName,Vegetration_currieshortDescription,VegetrartionCurryLongDescription,VegetrartionCurryPrice,VegetrartionCurryImage")] VegetrartionCurry VegetrartionCurry)
+        public ActionResult Create([Bind(Include = "VegetrartionCurryId,VegetrartionCurryName,Vegetration_currieshortDescription,VegetrartionCurryLongDescription,VegetrartionCurryPrice,VegetrartionCurryImage")] Vegetration_curry VegetrartionCurry)
         {
             if (ModelState.IsValid)
             {
-                db.Vegetration_curries.Add(VegetrartionCurry);
+                db.Vegetration_curry.Add(VegetrartionCurry);
                 db.SaveChanges();
                 return RedirectToAction("Admin");
             }
@@ -74,7 +74,7 @@ namespace Project2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vegetration_curry vegetrarioncurry = db.Vegetration_curries.Find(id);
+            Vegetration_curry vegetrarioncurry = db.Vegetration_curry.Find(id);
             if (vegetrarioncurry == null)
             {
                 return HttpNotFound();
@@ -88,7 +88,7 @@ namespace Project2.Controllers
         [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "VegetrartionCurryId,VegetrartionCurryName,Vegetration_currieshortDescription,VegetrartionCurryLongDescription,VegetrartionCurryPrice,VegetrartionCurryImage")] VegetrartionCurry VegetrartionCurry)
+        public ActionResult Edit([Bind(Include = "VegetrartionCurryId,VegetrartionCurryName,Vegetration_currieshortDescription,VegetrartionCurryLongDescription,VegetrartionCurryPrice,VegetrartionCurryImage")] Vegetration_curry VegetrartionCurry)
         {
             if (ModelState.IsValid)
             {
@@ -107,7 +107,7 @@ namespace Project2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vegetration_curry vegetrarioncurry = db.Vegetration_curries.Find(id);
+            Vegetration_curry vegetrarioncurry = db.Vegetration_curry.Find(id);
             if (vegetrarioncurry == null)
             {
                 return HttpNotFound();
@@ -120,8 +120,8 @@ namespace Project2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Vegetration_curry vegetrarioncurry = db.Vegetration_curries.Find(id);
-            db.Vegetration_curries.Remove(vegetrarioncurry);
+            Vegetration_curry vegetrarioncurry = db.Vegetration_curry.Find(id);
+            db.Vegetration_curry.Remove(vegetrarioncurry);
             db.SaveChanges();
             return RedirectToAction("Admin");
         }

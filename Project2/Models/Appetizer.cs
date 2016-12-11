@@ -9,8 +9,9 @@ namespace Project2.Models
     [Table("Appetizer")]
     public partial class Appetizer
     {
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int Id { get; set; }
+        public int AppetizerId { get; set; }
 
         [Required]
         [StringLength(50)]

@@ -1,18 +1,17 @@
 ﻿@model Project2.Models.Vegetration_curry
 @{
-    ViewBag.Title = "Edit Snacks";
+    ViewBag.Title = "Create Appetizer";
 }
-<h2>Edit Snacks</h2>
+<h2>Create Appetizer</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Snacks</h4>
+        <h4>Appetizer</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.VegetrationCurryId)
         <div class="form-group">
             @Html.LabelFor(model => model.VegetrationCurryName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -27,7 +26,6 @@
                 @Html.ValidationMessageFor(model => model.VegetrationCurryDescription, "", new { @class = "text-danger" })
             </div>
         </div>
-       
         <div class="form-group">
             @Html.LabelFor(model => model.VegetrationCurryPrice, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -44,7 +42,7 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>

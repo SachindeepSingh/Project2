@@ -9,8 +9,9 @@ namespace Project2.Models
     [Table("Vegetration curry")]
     public partial class Vegetration_curry
     {
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int Id { get; set; }
+        public int VegetrationCurryId { get; set; }
 
         [Required]
         [StringLength(50)]
